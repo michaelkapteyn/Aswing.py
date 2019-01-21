@@ -19,3 +19,5 @@ if __name__ == '__main__':
     aswmodel = model.aswModel(aswgeom, aswoper)
 
     # Run the above model in aswing, storing the results in the model object
+    # TODO
+    aswgeom.writetoasw()
