@@ -14,8 +14,8 @@ def asnum(s):
     except ValueError:
         return float(s)
 
-def writedata(f, data, fmt='%G'):
-    np.savetxt(f,np.atleast_2d(data), fmt, delimiter='    ', newline='\n')
+def writedata(f, data, fmt='%G', delimiter='    '):
+    np.savetxt(f,np.atleast_2d(data), fmt, delimiter, newline='\n')
 
 def isinline(line, stringtofind, rng):
     if len(line) < max(rng):
@@ -208,4 +208,140 @@ bvardict = {
     "dCDdF18" : [],
     "dCDdF19" : [],
     "dCDdF20" : []
+}
+
+outputVarsdict = {
+"Ax" : 1,   #linear acceleration
+"Ay" : 2,
+"Az" : 3,
+"alphax" : 4,   #ang.acc
+"alphay" : 5,
+"alphaz" : 6,
+"Ux" : 7,   #velocity
+"Uy" : 8,
+"Uz" : 9,
+"Wx" : 10,  #rot.rate
+"Wy" : 11,
+"Wz" : 12,
+"Rx" : 13,  #position
+"Ry" : 14,
+"Rz" : 15,
+"phi" : 16,     #bank
+"theta" : 17,   #elev
+"psi" : 18,     #head
+"Flap1" : 19,
+"Flap2" : 20,
+"Flap3" : 21,
+"Flap4" : 22,
+"Flap5" : 23,
+"Flap6" : 24,
+"Flap7" : 25,
+"Flap8" : 26,
+"Flap9" : 27,
+"Flap10" : 28,
+"Flap11" : 29,
+"Flap12" : 30,
+"Flap13" : 31,
+"Flap14" : 32,
+"Flap15" : 33,
+"Flap16" : 34,
+"Flap17" : 35,
+"Flap18" : 36,
+"Flap19" : 37,
+"Flap20" : 38,
+"Peng1" : 39,
+"Peng2" : 40,
+"Peng3" : 41,
+"Peng4" : 42,
+"Peng5" : 43,
+"Peng6" : 44,
+"Peng7" : 45,
+"Peng8" : 46,
+"Peng9" : 47,
+"Peng10" : 48,
+"Peng11" : 49,
+"Peng12" : 50,
+"Int(Vi-Vic)dt" : 51,
+"Int(be-bec)dt" : 52,
+"Int(al-alc)dt" : 53,
+"Int(Ph-Phc)dt" : 54,
+"Int(Th-Thc)dt" : 55,
+"Int(Ps-Psc)dt" : 56,
+"Int(Wx-Wxc)dt" : 57,
+"Int(Wy-Wyc)dt" : 58,
+"Int(Wz-Wzc)dt" : 59,
+"Int(a-g-ac)dt" : 60,
+"Int(a-g-ac)dt" : 61,
+"Int(a-g-ac)dt" : 62,
+"xcg" : 63, #cg position
+"ycg" : 64,
+"zcg" : 65,
+"V" : 66,
+"beta" : 67,
+"alpha" : 68,
+"VIAS_ref" : 69,
+"beta_ref" : 70,
+"alpha_ref" : 71,
+"Drag" : 72,
+"Sideforce" : 73,
+"Lift" : 74,
+"CDi" : 75,
+"CD" : 76,
+"CY" : 77,
+"CL" : 78,
+"Cl" : 79,
+"Cm" : 80,
+"Cn" : 81,
+"span eff." : 82
+}
+
+sensorVarsdict = {
+"Ax" : 1,  #linear  acceleration
+"Ay" : 2,
+"Az" : 3,
+"alphax" : 4,   #ang.acc
+"alphay" : 5,
+"alphaz" : 6,
+"Ux" : 7,   #velocity
+"Uy" : 8,
+"Uz" : 9,
+"Wx" : 10,  #rot.rate
+"Wy" : 11,
+"Wz" : 12,
+"Rx" : 13,  #position
+"Ry" : 14,
+"Rz" : 15,
+"phi" : 16,     #bank
+"theta" : 17,   #elev
+"psi" : 18,     #head
+"V" : 19,
+"beta" : 20,
+"alpha" : 21,
+"Fc" : 22, #forces
+"Fs" : 23,
+"Fn" : 24,
+"Mc" : 25,  #moments
+"Ms" : 26,
+"Mn" : 27,
+"rx" : 28,  #position
+"ry" : 29,
+"rz" : 30,
+"ux" : 31,  #velocity
+"uy" : 32,
+"uz" : 33,
+"Wx-Wxc dt" : 34,
+"Wy-Wyc dt" : 35,
+"Wz-Wzc dt" : 36,
+"ax-axc dt" : 37,
+"ay-ayc dt" : 38,
+"az-azc dt" : 39,
+"Vi-Vic dt" : 40,
+"be-bec dt" : 41,
+"al-alc dt" : 42,
+"Ph-Phc dt" : 43,
+"Th-Thc dt" : 44,
+"Ps-Psc dt" : 45,
+"Gamma" : 46,
+"eps_max" : 47,
+"tau" : 48
 }

@@ -1,6 +1,6 @@
 #============
 Name
-DAEDALUS  Full configuration
+aircraft
 End
 #============
 Units
@@ -10,6 +10,7 @@ F 1.0 lb
 End
 #============
 Constant
+#	g	rhoSL	VsoSL
 32.18  0.002378   1115.0
 End
 #============

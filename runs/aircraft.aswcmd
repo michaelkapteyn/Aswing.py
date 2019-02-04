@@ -1,0 +1,51 @@
+load dae_flex.asw
+plpa
+g
+
+oper
+k
+i
+50
+
+p
+s
+1
+2
+3
+7
+8
+9
+16
+17
+18
+39
+68
+
+16 0
+17 0
+18 0
+
+
+%
+F
+b
+
+a
+1
+
+!V 1
+n
+1
+!Ex -0.0
+xx
+p
+w
+
+
+
+w
+out.txt
+
+
+
+quit
