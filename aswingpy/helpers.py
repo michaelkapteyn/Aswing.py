@@ -54,6 +54,7 @@ def parsedatablock(fp, line, idx, nvalue, nvalueswithoutmult=0):
         else:
             rdat = np.zeros(nvalue)
             for i,val in enumerate(line.split()):
+                print(val)
                 rdat[i] = asnum(val)
 
             flinedata = np.multiply(rdat,qfac)+qadd
@@ -105,7 +106,7 @@ def parsebeamblock(fp, line, idx, nvalue):
     return np.atleast_2d(fdata), line, idx, beam_data_end
 
 
-bvardict = {
+globalbvardict = {
     "x" : [],
     "y" : [],
     "z" : [],

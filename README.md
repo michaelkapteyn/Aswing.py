@@ -1,5 +1,5 @@
 # Aswing.py
-Python wrapper for [ASWING](http://web.mit.edu/drela/Public/web/aswing/)
+A Python wrapper for [ASWING](http://web.mit.edu/drela/Public/web/aswing/)
 
 # Dependencies
 ### ASWING
@@ -24,10 +24,10 @@ The following functionality has been implemented:
 - Steady Solution
     - Write ASWING commands file
     - Execute ASWING and generate results files
+    - Read results files into python object
 
 The following functionality is on my to-do list:
 - Results Parsing
-    - Read results files into python object
     - Analyze and plot results
 - Unsteady Solution
 

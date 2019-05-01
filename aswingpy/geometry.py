@@ -244,7 +244,7 @@ class aswGeometry:
                         elif islineend(line):
                             break
                         else:
-                            data, line, idx = parsedatablock(fp, line, idx, 4, 2)
+                            data, line, idx = parsedatablock(fp, line, idx, 5, 2)
                             for row in data:
                                 if len(row) == 4:
                                     self.joints.append(joint(row[0], row[1], row[2], row[3]))
@@ -300,7 +300,7 @@ class aswGeometry:
 
                     #Incremenet the beam counter
                     # nbeam = nbeam+1
-
+                    bvardict = {}
                     # Read beam number and optional physical index
                     splitline = line.split()
                     beamIdx = asnum(splitline[1])
@@ -314,7 +314,6 @@ class aswGeometry:
                     idx+=1
 
                     beam_name = line.strip("\n")
-                    print(beam_name)
                     line = fp.readline()
                     idx += 1
                     line = fp.readline()
@@ -323,14 +322,13 @@ class aswGeometry:
                     while not beam_data_end:
 
                         bvar = line.split()
-                        print(bvar)
                         if bvar[0] != "t":
                             print("Warning: First beam variable must be t")
                         line = fp.readline()
                         idx += 1
                         data, line, idx, beam_data_end = parsebeamblock(fp, line, idx, len(bvar))
                         for i in range(1,len(bvar)):
-                            if bvar[i] not in bvardict:
+                            if bvar[i] not in globalbvardict:
                                 print("Warning: variable ", bvar[i] , " is not a valid variable")
                             else:
                                 bvardict[bvar[i]] = data[:,[0, i]]

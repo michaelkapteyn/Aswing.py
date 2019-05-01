@@ -16,8 +16,16 @@ class aswOperatingPoint:
             constraints = aswConstraints()
         self.constraints = constraints
 
-def aswConstraints(maneuver = "level"):
-    if "right" in maneuver.lower():
+
+def aswConstraints(maneuver = ""):
+    if "level" in maneuver.lower():
+        constraints = np.array( [[9, 31],\
+                                [17, 1],\
+                                [21, 4],\
+                                [22, 5],\
+                                [23, 6],\
+                                [24, 32]])
+    elif "right" in maneuver.lower():
         constraints = np.array([[21, 4],\
                                 [22, 5],\
                                 [23, 6],\
@@ -35,11 +43,7 @@ def aswConstraints(maneuver = "level"):
                                 [24, 32],\
                                 [9 , 3]])
 
-    else: #level flight
-        constraints = np.array( [[9, 31],\
-                                [17, 1],\
-                                [21, 4],\
-                                [22, 5],\
-                                [23, 6],\
-                                [24, 32]])
+    else: #operate in a vacuum
+        constraints = None
+
     return constraints
